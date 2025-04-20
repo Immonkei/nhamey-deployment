@@ -140,7 +140,7 @@ export default function App() {
             </svg>
           </div>
           <div className="flex justify-center">
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-10 px-4 mt-10">
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 px-4 mt-10">
               {trendingRestaurant.map((res) => (
                 <ResturantCard
                   key={`trending-${res.id}`}

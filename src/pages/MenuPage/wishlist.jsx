@@ -53,10 +53,7 @@ export default function Wishlist() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="mx-auto px-4 py-10">
-        <h1 className="text-3xl font-bold text-center mb-8 text-zinc-800 dark:text-gray-200">
-          My Wishlist
-        </h1>
-
+  
         {isLoading ? (
           <p className="text-center text-gray-600 dark:text-gray-300 p-[20%]">
             Loading...

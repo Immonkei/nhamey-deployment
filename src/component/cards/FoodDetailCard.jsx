@@ -1,6 +1,12 @@
 "use client";
 
+import { useState, useEffect, useRef } from "react";
+
 export default function FoodDetailCard({ food }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [shouldShowToggle, setShouldShowToggle] = useState(false);
+  const descriptionRef = useRef(null);
+
   if (!food) return null;
 
   const {
@@ -12,6 +18,21 @@ export default function FoodDetailCard({ food }) {
     category,
     meal_types,
   } = food;
+
+  // Measure height after rendering
+  useEffect(() => {
+    const el = descriptionRef.current;
+    if (el) {
+      const lineHeight = parseFloat(getComputedStyle(el).lineHeight);
+      const maxLines = 3;
+      const maxHeight = lineHeight * maxLines;
+      if (el.scrollHeight > maxHeight) {
+        setShouldShowToggle(true);
+      }
+    }
+  }, [description]);
+
+  const toggleDescription = () => setIsExpanded(!isExpanded);
 
   return (
     <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden p-6 sm:p-8 mt-6">
@@ -32,10 +53,27 @@ export default function FoodDetailCard({ food }) {
               {name}
             </h1>
 
-            <p className="mt-2 text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+            {/* Description with toggle */}
+            <p
+              ref={descriptionRef}
+              className={`mt-2 text-gray-600 dark:text-gray-300 text-base leading-relaxed transition-all duration-300 ${
+                isExpanded ? "line-clamp-none" : "line-clamp-3"
+              }`}
+            >
               {description}
             </p>
 
+            {/* Show toggle only if overflow */}
+            {shouldShowToggle && (
+              <button
+                className="mt-1 text-sm text-primary hover:underline"
+                onClick={toggleDescription}
+              >
+                {isExpanded ? "Show less" : "Show more"}
+              </button>
+            )}
+
+            {/* Tags */}
             <div className="mt-4 flex flex-wrap gap-2">
               {meal_types?.map((type, index) => (
                 <span
@@ -74,6 +112,7 @@ export default function FoodDetailCard({ food }) {
               </p>
             </div>
           </div>
+
 
           {/* Wishlist Button */}
           <button className="mt-4 w-max px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded">

@@ -123,7 +123,7 @@ export default function FoodCard({
 
         {/* Content */}
         <div className="p-3 sm:p-4">
-          <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#494949] dark:text-gray-100 line-clamp-1">
+          <h3 className="text-base sm:text-lg md:text-xl font-kh font-bold text-[#494949] dark:text-gray-100 line-clamp-1">
             {name || "Unnamed food"}
           </h3>
           <p className="text-xs sm:text-sm md:text-base text-gray-600 dark:text-gray-300 mt-1 line-clamp-3 leading-snug">
