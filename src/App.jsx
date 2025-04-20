@@ -122,10 +122,10 @@ export default function App() {
           </div>
           <div className="flex justify-center my-10">
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-              <FoodCategory image="./public/images/food/breakfast.png" title="Breakfast" />
-              <FoodCategory image="./public/images/food/lunch.png" title="Lunch" />
-              <FoodCategory image="./public/images/food/dessert.png" title="Dessert" />
-              <FoodCategory image="./public/images/food/fast_food.png" title="Fast Food" />
+              <FoodCategory image="/images/food/breakfast.png" title="Breakfast" />
+              <FoodCategory image="/images/food/lunch.png" title="Lunch" />
+              <FoodCategory image="/images/food/dessert.png" title="Dessert" />
+              <FoodCategory image="/images/food/fast_food.png" title="Fast Food" />
             </div>
           </div>
         </div>
@@ -175,7 +175,7 @@ export default function App() {
   {/* Image Section */}
   <div className="hidden md:block w-60 md:w-72 lg:w-80">
     <img
-      src="../src/images/img-style.png"
+      src="/images/img-style.png"
       alt="Decorative Banner"
       className="w-full h-auto object-contain"
     />

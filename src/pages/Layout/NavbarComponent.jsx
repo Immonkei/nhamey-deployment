@@ -41,7 +41,7 @@ export default function NavbarComponent() {
         {/* Logo */}
         <div className="flex-shrink-0">
           <NavLink to="/" className="block">
-            <img src="./public/images/Nham-Ey.png" alt="nham ey logo" className="h-18" />
+            <img src="/images/Nham-Ey.png" alt="nham ey logo" className="h-18" />
           </NavLink>
         </div>
 
