@@ -163,21 +163,14 @@ export default function NavbarComponent() {
             >
               About Us
             </NavLink>
+              <hr className="text-gray-700 dark:text-gray-300 " />
           </nav>
-
           <div className="border-t border-gray-200 dark:border-gray-700">
             {isAuthenticated ? (
               <div className="flex flex-col space-y-1">
                 <NavLink
-                  to="/profile"
-                  className="block w-full px-4 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-lime-500 rounded-md"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Profile
-                </NavLink>
-                <NavLink
                   to="/wishlist"
-                  className="block w-full px-4 py-2 text-center text-base font-medium text-white bg-lime-600 rounded-md hover:bg-lime-700"
+                  className="block w-full px-4 py-2 text-center text-base font-medium text-white bg-lime-600 rounded-md hover:bg-lime-700 "
                   onClick={() => setMenuOpen(false)}
                 >
                   Wishlist
