@@ -33,12 +33,12 @@ export default function About() {
             <div className="relative mt-6 md:mt-[100px] justify-center lg:block hidden">
               <div className="relative w-[300px] md:w-[499px] h-[300px] md:h-[499px]">
                 <img
-                  src="./public/images/aboutbg.png"
+                  src="/images/aboutbg.png"
                   alt="Food Background"
                   className="absolute inset-0 w-full h-full rounded-lg object-cover top-[10px]"
                 />
                 <img
-                  src="./public/images/1.png"
+                  src="/images/1.png"
                   alt="Food Bowl"
                   className="absolute inset-0 w-full h-full rounded-lg object-contain"
                 />
