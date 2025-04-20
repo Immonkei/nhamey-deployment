@@ -142,7 +142,7 @@ export default function About() {
           <div className="w-full flex justify-center mt-[100px]">
             <div className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-20 place-items-center">
               <MentorCard image="/images/IMG_0215.JPG" role="Team Leader" name="Min Phanith" />
-              <MentorCard image="/images/Kea.JPG" role="Sub Team Leader" name="Lim Mouykea" />
+              <MentorCard image="/images/Mouykea.JPG" role="Sub Team Leader" name="Lim Mouykea" />
               <MentorCard image="/images/mingyeck.JPG" role="Member" name="Houng Mingyeak" />
               <MentorCard image="/images/nak.jpg" role="Member" name="Thai Ratanak" />
               <MentorCard image="/images/nuth.JPG" role="Member" name="SovannRanuth" />
