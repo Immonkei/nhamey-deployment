@@ -33,12 +33,12 @@ export default function About() {
             <div className="relative mt-6 md:mt-[100px] justify-center lg:block hidden">
               <div className="relative w-[300px] md:w-[499px] h-[300px] md:h-[499px]">
                 <img
-                  src="/src/images/aboutbg.png"
+                  src="./public/images/aboutbg.png"
                   alt="Food Background"
                   className="absolute inset-0 w-full h-full rounded-lg object-cover top-[10px]"
                 />
                 <img
-                  src="/src/images/1.png"
+                  src="./public/images/1.png"
                   alt="Food Bowl"
                   className="absolute inset-0 w-full h-full rounded-lg object-contain"
                 />
@@ -124,8 +124,8 @@ export default function About() {
           </div>
           <div className="w-full flex justify-center mt-[100px]">
             <div className="grid sm:grid-cols-2 gap-20 place-items-center">
-              <MentorCard image="/src/images/IMG_8823.jpg" role="Mentor" name="Sin Sreyphea" />
-              <MentorCard image="/src/images/IMG_0905 copy.JPG" role="Mentor" name="Srorng Sokcheat" />
+              <MentorCard image="./public/images/IMG_8823.jpg" role="Mentor" name="Sin Sreyphea" />
+              <MentorCard image="./public/images/IMG_0905 copy.JPG" role="Mentor" name="Srorng Sokcheat" />
             </div>
           </div>
 
@@ -141,15 +141,15 @@ export default function About() {
           </div>
           <div className="w-full flex justify-center mt-[100px]">
             <div className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-20 place-items-center">
-              <MentorCard image="/src/images/IMG_0215.JPG" role="Team Leader" name="Min Phanith" />
-              <MentorCard image="/src/images/Kea.JPG" role="Sub Team Leader" name="Lim Mouykea" />
-              <MentorCard image="/src/images/mingyeck.JPG" role="Member" name="Houng Mingyeak" />
-              <MentorCard image="/src/images/nak.JPG" role="Member" name="Thai Ratanak" />
-              <MentorCard image="/src/images/nuth.JPG" role="Member" name="SovannRanuth" />
-              <MentorCard image="/src/images/bol.JPG" role="Member" name="Houn Vibol" />
-              <MentorCard image="/src/images/tri.JPG" role="Member" name="Ri Tri" />
-              <MentorCard image="/src/images/Na.JPG" role="Member" name="Ben Thona" />
-              <MentorCard image="/src/images/nich.JPG" role="Member" name="Phorn Sunnich" />
+              <MentorCard image="./public/images/IMG_0215.JPG" role="Team Leader" name="Min Phanith" />
+              <MentorCard image="./public/images/Kea.JPG" role="Sub Team Leader" name="Lim Mouykea" />
+              <MentorCard image="./public/images/mingyeck.JPG" role="Member" name="Houng Mingyeak" />
+              <MentorCard image="./public/images/nak.JPG" role="Member" name="Thai Ratanak" />
+              <MentorCard image="./public/images/nuth.JPG" role="Member" name="SovannRanuth" />
+              <MentorCard image="./public/images/bol.JPG" role="Member" name="Houn Vibol" />
+              <MentorCard image="./public/images/tri.JPG" role="Member" name="Ri Tri" />
+              <MentorCard image="./public/images/Na.JPG" role="Member" name="Ben Thona" />
+              <MentorCard image="./public/images/nich.JPG" role="Member" name="Phorn Sunnich" />
             </div>
           </div>
         </div>

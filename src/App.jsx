@@ -122,10 +122,10 @@ export default function App() {
           </div>
           <div className="flex justify-center my-10">
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-              <FoodCategory image="../src/images/food/breakfast.png" title="Breakfast" />
-              <FoodCategory image="../src/images/food/lunch.png" title="Lunch" />
-              <FoodCategory image="../src/images/food/dessert.png" title="Dessert" />
-              <FoodCategory image="../src/images/food/fast_food.png" title="Fast Food" />
+              <FoodCategory image="./public/images/food/breakfast.png" title="Breakfast" />
+              <FoodCategory image="./public/images/food/lunch.png" title="Lunch" />
+              <FoodCategory image="./public/images/food/dessert.png" title="Dessert" />
+              <FoodCategory image="./public/images/food/fast_food.png" title="Fast Food" />
             </div>
           </div>
         </div>
