@@ -54,9 +54,11 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Thin line and copyright */}
-        <div className="border-t border-zinc-600 pt-4 text-sm text-zinc-300">
-          © 2025 NhamEy by ISTAD. All rights reserved.
+        {/* Line and side-by-side layout */}
+        <div className="border-t border-zinc-600 pt-4">
+          <div className="flex flex-col md:flex-row items-center justify-center text-sm text-zinc-300 gap-2">
+            <p>© 2025 NhamEy by ISTAD. All rights reserved.</p>
+          </div>
         </div>
       </div>
     </footer>
