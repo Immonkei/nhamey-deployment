@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import  FoodDetailCard  from "../../component/cards/FoodDetailCard";
+import FoodDetailCard from "../../component/cards/FoodDetailCard";
 
 export default function FoodDetails() {
   const { id } = useParams();
@@ -21,15 +21,21 @@ export default function FoodDetails() {
   }, [id]);
 
   return (
-    <main className="pt-8 pb-10 dark:bg-gray-900 min-h-screen">
-      <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold text-zinc-800 dark:text-white">Food Details</h1>
+    <main className="pt-6 sm:pt-8 pb-8 sm:pb-12 px-4 sm:px-6 md:px-10 dark:bg-gray-900 min-h-screen">
+      <div className="text-center mb-6 sm:mb-10">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-zinc-800 dark:text-white">
+          Food Details
+        </h1>
       </div>
 
       {food ? (
-        <FoodDetailCard food={food} />
+        <div className="max-w-5xl mx-auto">
+          <FoodDetailCard food={food} />
+        </div>
       ) : (
-        <p className="text-center text-gray-600 dark:text-gray-300">Loading...</p>
+        <p className="text-center text-gray-600 dark:text-gray-300 text-base sm:text-lg">
+          Loading...
+        </p>
       )}
     </main>
   );
