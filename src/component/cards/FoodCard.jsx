@@ -108,7 +108,7 @@ export default function FoodCard({
         </button>
 
         {/* Image */}
-        <div className="relative px-3 py-3 bg-[#fafaf9] dark:bg-gray-700 rounded-t-xl">
+        <div className="relative px-3 py-3 bg-white dark:bg-gray-700 rounded-t-xl">
           <img
             className="w-full h-40 sm:h-48 md:h-52 object-cover rounded-lg"
             src={validImageUrl}

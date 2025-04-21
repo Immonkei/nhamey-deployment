@@ -4,18 +4,20 @@ export default function Footer() {
   return (
     <footer className="bg-primary w-full py-10 px-4 text-white">
       <div className="max-w-6xl mx-auto text-center">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-8 text-zinc-100 justify-center">
-        <div className="mx-auto col-span-2 md:col-span-1">
+        {/* Footer Content */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4  mb-8 text-zinc-100">
+          {/* Organized By */}
+          <div className="flex flex-col items-center">
             <h3 className="font-semibold text-lg mb-4 text-white">Organized By</h3>
-            <div className="flex justify-center">
-              <img
-                src="https://www.cstad.edu.kh/icon.png?ff407d7ec1c2072a"
-                alt="ISTAD logo"
-                className="w-24 h-auto object-contain"
-              />
-            </div>
+            <img
+              src="https://www.cstad.edu.kh/icon.png?ff407d7ec1c2072a"
+              alt="ISTAD logo"
+              className="w-24 h-auto object-contain"
+            />
           </div>
-          <div className="mx-auto">
+
+          {/* Contents */}
+          <div className="flex flex-col items-center">
             <h3 className="font-semibold text-lg mb-4 text-white">Contents</h3>
             <ul className="space-y-2">
               <li>Home</li>
@@ -25,7 +27,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="mx-auto">
+          {/* Tech Stack */}
+          <div className="flex flex-col items-center">
             <h3 className="font-semibold text-lg mb-4 text-white">Tech Stack</h3>
             <ul className="space-y-2">
               <li>HTML</li>
@@ -35,7 +38,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="mx-auto">
+          {/* Features */}
+          <div className="flex flex-col items-center">
             <h3 className="font-semibold text-lg mb-4 text-white">Features</h3>
             <ul className="space-y-2">
               <li>Wishlist</li>
@@ -44,15 +48,11 @@ export default function Footer() {
               <li>Filter</li>
             </ul>
           </div>
-
-          
         </div>
 
-        {/* Line and side-by-side layout */}
+        {/* Divider and Bottom Text */}
         <div className="border-t border-zinc-600 pt-4">
-          <div className="flex flex-col md:flex-row items-center justify-center text-sm text-zinc-300 gap-2">
-            <p>© 2025 NhamEy by ISTAD. All rights reserved.</p>
-          </div>
+          <p className="text-sm text-zinc-300">© 2025 NhamEy by ISTAD. All rights reserved.</p>
         </div>
       </div>
     </footer>
