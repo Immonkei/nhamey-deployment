@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-primary w-full py-10 px-4 text-white">
       <div className="max-w-6xl mx-auto text-center">
         {/* Footer Content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4  mb-8 text-zinc-100">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4  mb-8 text-zinc-100">
           {/* Organized By */}
           <div className="flex flex-col items-center">
             <h3 className="font-semibold text-lg mb-4 text-white">Organized By</h3>
