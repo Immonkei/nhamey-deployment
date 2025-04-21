@@ -122,10 +122,18 @@ export default function App() {
           </div>
           <div className="flex justify-center my-10">
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-              <FoodCategory image="/images/food/breakfast.png" title="Breakfast" />
+              <NavLink to="/food?category=breakfast">
+                <FoodCategory image="/images/food/breakfast.png" title="Breakfast" />
+              </NavLink>
+              <NavLink to="/food?category=lunch">
               <FoodCategory image="/images/food/lunch.png" title="Lunch" />
+              </NavLink>
+              <NavLink to="/food?category=dessert">
               <FoodCategory image="/images/food/dessert.png" title="Dessert" />
-              <FoodCategory image="/images/food/fast_food.png" title="Fast Food" />
+              </NavLink>
+              <NavLink to="/food?category=snack">
+              <FoodCategory image="/images/food/fast_food.png" title="Snack" />
+              </NavLink>
             </div>
           </div>
         </div>
@@ -140,7 +148,7 @@ export default function App() {
             </svg>
           </div>
           <div className="flex justify-center">
-            <div className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 px-4 mt-10">
+            <div className="grid max-w-500 sm:grid-cols-1 md:grid-cols-2 gap-6 px-4 mt-10">
               {trendingRestaurant.map((res) => (
                 <ResturantCard
                   key={`trending-${res.id}`}

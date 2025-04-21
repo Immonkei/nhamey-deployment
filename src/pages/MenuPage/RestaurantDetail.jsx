@@ -95,58 +95,9 @@ export default function RestaurantDetail() {
       </div>
 
       {/* Content Section */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-none">
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-700">
-          {/* Navigation Tabs */}
-          <div className="border-b border-gray-200 dark:border-gray-700">
-            <nav className="flex -mb-px overflow-x-auto scrollbar-hide">
-              <button
-                onClick={() => setActiveTab('overview')}
-                className={`py-4 px-6 text-center border-b-2 font-medium text-sm whitespace-nowrap ${activeTab === 'overview' 
-                  ? 'border-primary dark:border-yellow-400 text-primary dark:text-yellow-400' 
-                  : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'}`}
-              >
-                <span className="flex items-center justify-center gap-2">
-                  <IoRestaurant className="text-lg" />
-                  Overview
-                </span>
-              </button>
-              <button
-                onClick={() => setActiveTab('menu')}
-                className={`py-4 px-6 text-center border-b-2 font-medium text-sm whitespace-nowrap ${activeTab === 'menu' 
-                  ? 'border-primary dark:border-yellow-400 text-primary dark:text-yellow-400' 
-                  : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'}`}
-              >
-                <span className="flex items-center justify-center gap-2">
-                  <FaUtensils className="text-lg" />
-                  Menu
-                </span>
-              </button>
-              <button
-                onClick={() => setActiveTab('reviews')}
-                className={`py-4 px-6 text-center border-b-2 font-medium text-sm whitespace-nowrap ${activeTab === 'reviews' 
-                  ? 'border-primary dark:border-yellow-400 text-primary dark:text-yellow-400' 
-                  : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'}`}
-              >
-                <span className="flex items-center justify-center gap-2">
-                  <FaStar className="text-lg" />
-                  Reviews
-                </span>
-              </button>
-              <button
-                onClick={() => setActiveTab('photos')}
-                className={`py-4 px-6 text-center border-b-2 font-medium text-sm whitespace-nowrap ${activeTab === 'photos' 
-                  ? 'border-primary dark:border-yellow-400 text-primary dark:text-yellow-400' 
-                  : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'}`}
-              >
-                <span className="flex items-center justify-center gap-2">
-                  <FaRegCalendarAlt className="text-lg" />
-                  Photos
-                </span>
-              </button>
-            </nav>
-          </div>
-
+         
           {/* Tab Content */}
           <div className="p-6 md:p-8">
             {activeTab === 'overview' && (
