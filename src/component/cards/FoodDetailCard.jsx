@@ -42,12 +42,13 @@ export default function FoodDetailCard({ food }) {
           <img
             src={`https://nham-ey.istad.co${image_url}`}
             alt={name}
-            className="w-full md:w-[400px] h-[300px] object-cover rounded-lg"
+            className="w-full md:w-[400px] h-[350px] object-cover rounded-lg"
           />
         </div>
 
         {/* Content */}
         <div className="flex flex-col justify-between flex-1">
+          
           <div>
             <h1 className="text-3xl font-bold text-gray-800 dark:text-white font-kh">
               {name}
@@ -55,23 +56,22 @@ export default function FoodDetailCard({ food }) {
 
             {/* Description with toggle */}
             <p
-              ref={descriptionRef}
-              className={`mt-2 text-gray-600 dark:text-gray-300 text-base leading-relaxed transition-all duration-300 ${
-                isExpanded ? "line-clamp-none" : "line-clamp-3"
-              }`}
+              
+              className="mt-2 text-gray-600 dark:text-gray-300 text-base leading-relaxed transition-all duration-300 $"
+              
             >
               {description}
             </p>
 
             {/* Show toggle only if overflow */}
-            {shouldShowToggle && (
+            {/* {shouldShowToggle && (
               <button
                 className="mt-1 text-sm text-primary hover:underline"
                 onClick={toggleDescription}
               >
                 {isExpanded ? "Show less" : "Show more"}
               </button>
-            )}
+            )} */}
 
             {/* Tags */}
             <div className="mt-4 flex flex-wrap gap-2">
