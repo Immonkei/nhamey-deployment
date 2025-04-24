@@ -60,20 +60,11 @@ export default function FoodDetailCard({ food }) {
           <div>
             <p
               ref={descriptionRef}
-              className={`transition-all duration-300 text-base leading-relaxed ${
-                isExpanded ? "line-clamp-none" : "line-clamp-3"
-              }`}
+              
             >
               {description}
             </p>
-            {shouldShowToggle && (
-              <button
-                onClick={toggleDescription}
-                className="mt-2 text-sm text-primary hover:underline"
-              >
-                {isExpanded ? "Show less" : "Show more"}
-              </button>
-            )}
+            
           </div>
 
           {/* Tags */}
