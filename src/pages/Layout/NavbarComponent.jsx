@@ -173,7 +173,7 @@ export default function NavbarComponent() {
                   className="block w-full px-4 py-2 text-center text-base font-medium text-white bg-lime-600 rounded-md hover:bg-lime-700 "
                   onClick={() => setMenuOpen(false)}
                 >
-                  Wishlist
+                  Wish list
                 </NavLink>
                 <button
                   onClick={handleLogout}
