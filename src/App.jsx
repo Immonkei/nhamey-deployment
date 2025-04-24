@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./index.css";
 import FoodCard from "./component/cards/FoodCard";
 import FoodCategory from "./component/cards/FoodCategory";
@@ -46,6 +48,7 @@ export default function App() {
   }
 
   useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
     setIsLoading(true);
     Promise.all([getFood(), getRestaurant()]).finally(() =>
       setIsLoading(false)
@@ -122,17 +125,17 @@ export default function App() {
           </div>
           <div className="flex justify-center my-10">
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-              <NavLink to="/food?category=breakfast">
+              <NavLink to="/food?category=breakfast" data-aos="zoom-in">
                 <FoodCategory image="/images/food/breakfast.png" title="Breakfast" />
               </NavLink>
-              <NavLink to="/food?category=lunch">
-              <FoodCategory image="/images/food/lunch.png" title="Lunch" />
+              <NavLink to="/food?category=lunch" data-aos="zoom-in">
+                <FoodCategory image="/images/food/lunch.png" title="Lunch" />
               </NavLink>
-              <NavLink to="/food?category=dessert">
-              <FoodCategory image="/images/food/dessert.png" title="Dessert" />
+              <NavLink to="/food?category=dessert" data-aos="zoom-in">
+                <FoodCategory image="/images/food/dessert.png" title="Dessert" />
               </NavLink>
-              <NavLink to="/food?category=snack">
-              <FoodCategory image="/images/food/fast_food.png" title="Snack" />
+              <NavLink to="/food?category=snack" data-aos="zoom-in">
+                <FoodCategory image="/images/food/fast_food.png" title="Snack" />
               </NavLink>
             </div>
           </div>
@@ -150,15 +153,16 @@ export default function App() {
           <div className="flex justify-center">
             <div className="grid max-w-500 sm:grid-cols-1 md:grid-cols-2 gap-6 px-4 mt-10">
               {trendingRestaurant.map((res) => (
-                <ResturantCard
-                  key={`trending-${res.id}`}
-                  id={res.id} // pass ID to ResturantCard
-                  name={res.name}
-                  image_url={`${base_url}${res.image_url}`}
-                  description={res.description}
-                  average_rating={res.average_rating}
-                  isTrending={true}
-                />
+                <div data-aos="fade-up" key={`trending-${res.id}`}>
+                  <ResturantCard
+                    id={res.id}
+                    name={res.name}
+                    image_url={`${base_url}${res.image_url}`}
+                    description={res.description}
+                    average_rating={res.average_rating}
+                    isTrending={true}
+                  />
+                </div>
               ))}
             </div>
           </div>
@@ -166,30 +170,26 @@ export default function App() {
 
         {/* BANNER */}
         <div className="bg-bg-2 dark:bg-gray-500 w-full my-12 flex flex-col md:flex-row items-center justify-center px-4 md:px-12 lg:px-24 h-auto md:h-[193px] space-y-6 md:space-y-0">
-  {/* Text Section */}
-  <div className="text-left md:mr-50">
-    <h1 className="text-4xl md:text-5xl lg:text-6xl text-primary dark:text-green-400 font-bold">
-      Good Food
-    </h1>
-    <h2 className="text-2xl md:text-3xl text-zinc-700 dark:text-zinc-200 font-bold">
-      Great time!
-    </h2>
-    <p className="max-w-md text-sm text-zinc-600 dark:text-zinc-300 mt-2 mx-auto md:mx-0">
-      Enjoy your day with many foods. Find your favorite dishes. Our site gives you
-      info about the foods you like.
-    </p>
-  </div>
-
-  {/* Image Section */}
-  <div className="hidden md:block w-60 md:w-72 lg:w-80">
-    <img
-      src="/images/img-style.png"
-      alt="Decorative Banner"
-      className="w-full h-auto object-contain"
-    />
-  </div>
-</div>
-
+          <div className="text-left md:mr-50">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-primary dark:text-green-400 font-bold">
+              Good Food
+            </h1>
+            <h2 className="text-2xl md:text-3xl text-zinc-700 dark:text-zinc-200 font-bold">
+              Great time!
+            </h2>
+            <p className="max-w-md text-sm text-zinc-600 dark:text-zinc-300 mt-2 mx-auto md:mx-0">
+              Enjoy your day with many foods. Find your favorite dishes. Our site gives you
+              info about the foods you like.
+            </p>
+          </div>
+          <div className="hidden md:block w-60 md:w-72 lg:w-80">
+            <img
+              src="/images/img-style.png"
+              alt="Decorative Banner"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </div>
 
         {/* TRENDING FOODS */}
         <section className="mb-12">
@@ -205,17 +205,18 @@ export default function App() {
           <div className="flex justify-center mt-10">
             <div className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 px-4">
               {trendingFood.map((food) => (
-                <FoodCard
-                  key={`trending-${food.id}`}
-                  id={food.id} // pass ID to FoodCard
-                  name={food.name}
-                  price={food.price}
-                  image_url={`${base_url}${food.image_url}`}
-                  description={food.description}
-                  average_rating={food.average_rating}
-                  category={food.category}
-                  isTrending={true}
-                />
+                <div data-aos="fade-up" key={`trending-${food.id}`}>
+                  <FoodCard
+                    id={food.id}
+                    name={food.name}
+                    price={food.price}
+                    image_url={`${base_url}${food.image_url}`}
+                    description={food.description}
+                    average_rating={food.average_rating}
+                    category={food.category}
+                    isTrending={true}
+                  />
+                </div>
               ))}
             </div>
           </div>

@@ -30,7 +30,7 @@ export default function FoodDetails() {
           className="flex items-center text-sm sm:text-base text-primary dark:text-primary hover:underline mb-4"
         >
           <ArrowLeft className="w-4 h-4 mr-1" />
-          Back to food 
+        
         </button>
 
 
