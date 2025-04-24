@@ -7,7 +7,6 @@
     "dev": "vite",
     "build": "npm run generate-html && vite build",
     "generate-html": "mkdir -p dist && cp index.html dist/",
-
     "lint": "eslint .",
     "preview": "vite preview",
     "postinstall": "flowbite-react patch"
@@ -16,6 +15,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "aos": "^2.3.4",
     "flowbite-react": "^0.11.5",
     "formik": "^2.4.6",
     "framer-motion": "^12.6.3",

@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import MentorCard from "../../component/cards/MentorCard";
 
 export default function About() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <>
       <section>
         <div className="bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
           <div className="flex flex-wrap justify-center gap-[30px] md:gap-[50px] items-center mx-[20px] md:mx-[100px]">
-            <div className="text-center md:text-left mt-10">
+            <div
+              className="text-center md:text-left mt-10"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+            >
               <h2 className="font-bold text-2xl font-kh text-[36px] bg-gradient-to-r from-primary via-[#F6BA58] to-[#EED84C] bg-clip-text text-transparent">
                 ISTAD PRE-UNIVERSITY G3
               </h2>
@@ -29,7 +39,11 @@ export default function About() {
               </a>
             </div>
 
-            <div className="relative mt-6 md:mt-[100px] justify-center lg:block hidden">
+            <div
+              className="relative mt-6 md:mt-[100px] justify-center lg:block hidden"
+              data-aos="zoom-in"
+              data-aos-duration="1500"
+            >
               <div className="relative w-[300px] md:w-[499px] h-[300px] md:h-[499px]">
                 <img
                   src="/images/aboutbg.png"
@@ -52,7 +66,12 @@ export default function About() {
           </div>
 
           {/* OUR PURPOSE Section */}
-          <div id="our-purpose" className="flex flex-col items-center justify-center py-15 bg-gray-100 dark:bg-gray-900 pb-full">
+          <div
+            id="our-purpose"
+            className="flex flex-col items-center justify-center py-15 bg-gray-100 dark:bg-gray-900 pb-full"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
             <h2 className="text-[#5B913B] dark:text-[#8DD584] font-bold text-[32px] font-kh ">
               OUR PURPOSE
             </h2>
@@ -68,7 +87,11 @@ export default function About() {
       <section>
         <div className="bg-[#77B254] dark:bg-gray-900">
           {/* Our Mission */}
-          <div className="w-full flex justify-center pt-[60px] md:pt-[130px] px-4">
+          <div
+            className="w-full flex justify-center pt-[60px] md:pt-[130px] px-4"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
             <div className="flex flex-col md:flex-row items-center gap-6 max-w-5xl w-full">
               <img
                 src="/Assets/AboutUsimg.png"
@@ -87,7 +110,11 @@ export default function About() {
           </div>
 
           {/* Our Vision */}
-          <div className="w-full flex justify-center pb-[60px] md:pb-[130px] px-4">
+          <div
+            className="w-full flex justify-center pb-[60px] md:pb-[130px] px-4"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
             <div className="flex flex-col md:flex-row-reverse items-center gap-6 max-w-5xl w-full">
               <img
                 src="/Assets/about2img.webp"
@@ -107,7 +134,10 @@ export default function About() {
         </div>
 
         {/* Mentor Section */}
-        <div className="bg-white dark:bg-gray-900 pb-20">
+        <div
+          className="bg-white dark:bg-gray-900 pb-20"
+          
+        >
           <div className="flex flex-col items-center justify-center">
             <h2 className="text-[#77B254] dark:text-[#9DDC6D] font-bold text-[32px] font-kh mt-[95px] ">
               Our Mentor
@@ -118,7 +148,9 @@ export default function About() {
             </div>
           </div>
           <div className="w-full flex justify-center mt-[60px]">
-            <div className="grid sm:grid-cols-2 gap-10 md:gap-16 xl:gap-20 place-items-center">
+            <div className="grid sm:grid-cols-2 gap-10 md:gap-16 xl:gap-20 place-items-center"
+             data-aos="fade-up"
+             data-aos-duration="1500">
               <MentorCard image="/images/IMG_8823.jpg" role="Mentor" name="Sin Sreyphea" />
               <MentorCard image="/images/IMG_0905 copy.JPG" role="Mentor" name="Srorng Sokcheat" />
             </div>
@@ -135,7 +167,9 @@ export default function About() {
             </div>
           </div>
           <div className="w-full flex justify-center mt-[60px]">
-            <div className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 md:gap-16 xl:gap-20 place-items-center">
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 md:gap-16 xl:gap-20 place-items-center"
+                data-aos="fade-up"
+                data-aos-duration="1500">
               <MentorCard image="/images/IMG_0215.JPG" role="Team Leader" name="Min Phanith" />
               <MentorCard image="/images/Mouykea.JPG" role="Sub Team Leader" name="Lim Mouykea" />
               <MentorCard image="/images/mingyeck.JPG" role="Member" name="Houng Mingyeak" />
